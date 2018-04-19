@@ -9,6 +9,9 @@
     "start": "webpack -p --progress --profile --colors && node server",
     "ns": "node server"
   },
+	"engines": {
+		"node": "6.11.1"
+	},
   "dependencies": {
     "assert": "^1.4.1",
     "autoprefixer": "^7.1.2",
