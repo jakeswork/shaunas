@@ -6,17 +6,14 @@ body
 
 .modal
 	background: white
-	max-width: 85%
-	margin: 0 auto
-	padding: 30px
-	margin: 10px
+	max-width: calc(90% - 20px)
+	width: 500px
+	padding: 20px
+	margin: 10px auto
 	background: #fff
 	border-radius: 5px
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
 #app
-	display: flex
-	justify-content: center
-	align-items: center
 	color: $dark
 	text-align: center
 	canvas
@@ -106,10 +103,9 @@ body
 @media only screen and (max-width: 450px)
 	#app
 		h1
-			font-size: 50px
-		.text
-			max-width: 90%
-			margin: 0 auto
+			font-size: 60px
 		button
 			width: 100%
 			margin: 20px auto
+		input
+			width: calc(100% - 20px)
