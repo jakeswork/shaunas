@@ -71,7 +71,7 @@ class Landing extends Component {
 
 	render() {
 		return (
-			<div className="full-page">
+			<div>
 				<Confetti />
 				{ this.state.loading && <Loading /> }
 				{	this.state.userVoted
