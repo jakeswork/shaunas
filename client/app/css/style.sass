@@ -1,0 +1,114 @@
+@import 'colourPalette.sass'
+
+body
+	font-family: 'Dancing Script', cursive
+	background: $white
+
+main
+	background: white
+	padding: 30px
+	margin: 10px
+	background: #fff
+	border-radius: 5px
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+#app
+	height: 100vh
+	display: flex
+	justify-content: center
+	align-items: center
+	color: $dark
+	text-align: center
+	canvas
+		position: fixed
+		opacity: 0.5
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: -1
+	h1
+		font-size: 120px
+		margin: 20px 0
+	h2
+		font-size: 30px
+	.text
+		margin: 20px 0
+		p
+			font-family: 'Open Sans', sans-serif
+			font-size: 20px
+			font-weight: 300
+		.shauna
+			text-transform: uppercase
+			font-size: 32px
+	.error-text
+		font-family: 'Open Sans', sans-serif
+		font-weight: 400
+		color: $orange
+		margin: 20px 0 0
+	button
+		background: rgb(9, 132, 227)
+		font-family: 'Open Sans', sans-serif
+		border: 0
+		color: white
+		border-radius: 5px
+		font-size: 16px
+		margin: 0 10px
+		padding: 10px 20px
+		transition: all .3s ease-in-out
+		&.alternate-button
+			background: rgb(116, 185, 255)
+		&:hover
+			background: $dark
+			color: $white
+	input
+		background: transparent
+		font-size: 30px
+		outline: none
+		margin: 20px 0
+		border: 0
+		border-bottom: 1px solid $dark
+		padding: 10px
+		transition: all .4s ease-in-out
+
+@keyframes spin
+	100%
+		transform: rotate(360deg)
+
+.overlay
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	background: transparentize($white, 0.2)
+
+.spinner
+	width: 100px
+	height: 100px
+	display: flex
+	justify-content: center
+	align-items: center
+	margin: 10px 20px
+	&:before
+		content: ""
+		color: white
+		height: 50px
+		width: 50px
+		background: transparent
+		border-radius: 50%
+		border: 5px solid transparent
+		border-color: $blue $blue transparent transparent
+		animation: spin .8s infinite
+@media only screen and (max-width: 450px)
+	#app
+		h1
+			font-size: 50px
+		.text
+			max-width: 90%
+			margin: 0 auto
+		button
+			width: 100%
+			margin: 20px auto
